@@ -1,1 +1,81 @@
 
+# 🤖 Self-Evolving Bipedal Robot Species
+
+### *Webots Implementation*
+
+---
+
+## 💡 Ideology
+
+The goal of this project is to simulate **evolutionary learning** in bipedal robots — enabling them to *learn, adapt, and evolve* their walking strategies over generations, much like living organisms do in nature.
+
+Instead of manually coding a walking gait, we use **evolutionary algorithms** to let robots **self-discover optimal movement patterns** through trial, error, and selection.
+
+---
+
+## ⚙️ Phase 1 – Setup and Foundation
+
+### 🎯 Objective
+
+Build the base simulation environment and robot structure required for the evolution process to begin.
+
+### 🧱 Phase 1 Tasks
+
+* Create the **bipedal robot prototype** in Webots (legs, joints, sensors, motors).
+* Set up the **evolutionary supervisor** to manage multiple robots and generations.
+* Define **fitness criteria** (e.g., distance walked, balance, or energy efficiency).
+* Build a **modular project structure** for clean and scalable development.
+
+---
+
+## 🌍 Why Bipedal Robots?
+
+1. **Complex locomotion** → creates a rich fitness landscape for evolution.
+2. **Balancing challenges** → provide strong natural selection pressure.
+3. **Gait evolution** → produces visible, measurable progress across generations.
+4. **Human-like movement** → results are intuitive and easy to visualize and analyze.
+
+---
+
+## 🧬 Core Concept
+
+We simulate an **evolutionary process** where:
+
+* Each robot = one **individual** (genome = parameters controlling joints).
+* The **population** evolves across generations.
+* **Best performers** (robots that walk farthest or stay balanced longest) are selected.
+* **Offspring inherit and mutate** traits — leading to gradually improved gaits over time.
+
+---
+
+## 📁 Project Structure
+
+```
+bipedal_evolution_project/
+├── worlds/
+│   └── evolution_world.wbt          # Main Webots world file
+├── controllers/
+│   ├── evolutionary_supervisor/     # Evolution manager
+│   │   ├── evolutionary_supervisor.py
+│   │   ├── genome.py
+│   │   ├── population.py
+│   │   └── environment.py
+│   └── bipedal_robot/               # Robot controller logic
+│       └── bipedal_robot.py
+```
+
+
+
+## 🧠 Tools & Technologies
+
+* **Webots** – 3D robot simulation environment
+* **Python** – Controller logic and evolution algorithms
+* **Evolutionary Algorithms** – Genetic-style learning and adaptation
+
+---
+
+## 🏁 Expected Outcome
+
+By the end of Phase 1, we will have a **working environment** with a bipedal robot prototype and an **evolution supervisor** ready to simulate evolution-based locomotion.
+
+---
