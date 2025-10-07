@@ -1,0 +1,196 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.0832100915679602 0.07194407763862477 0.9939316527578641 1.7218196628819387
+  position 0.3621348849073885 -1.6253665544952538 0.9118450345792655
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  translation 0 0 0.4
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor 0.06 0.215 0
+        minStop -0.5
+        maxStop 0.5
+      }
+      device [
+        PositionSensor {
+          name "left_hip_roll_sensor"
+        }
+        RotationalMotor {
+          name "left_hip_roll_motor"
+          maxTorque 6
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 0 -0.13
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 0 1
+              anchor 0 0 -0.07
+              minStop -1.2
+              maxStop 1.2
+            }
+            device [
+              PositionSensor {
+                name "left_hip_pitch_sensor"
+              }
+              RotationalMotor {
+                name "left_hip_pitch_motor"
+              }
+            ]
+            endPoint Solid {
+              translation 0 0 -0.07
+              children [
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 0 1
+                    anchor 0 0 -0.07
+                    maxStop 2
+                  }
+                  device [
+                    PositionSensor {
+                      name "left_knee_sensor"
+                    }
+                    RotationalMotor {
+                      name "left_knee_motor"
+                    }
+                  ]
+                  endPoint Solid {
+                    translation 0 0 -0.089
+                    children [
+                      Shape {
+                        geometry Box {
+                          size 0.07 0.07 0.03
+                        }
+                      }
+                    ]
+                  }
+                }
+                DEF hip_thigh Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.9 0.8 0.6
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.07 0.07 0.16
+                  }
+                }
+              ]
+              name "hip pitch"
+              boundingObject USE hip_thigh
+              physics Physics {
+                mass 0.12
+              }
+              linearVelocity 0 0 -1.4572312956319466e-08
+            }
+          }
+        ]
+      }
+    }
+    Solid {
+      translation 0.118 0 0.0029937278171947024
+      children [
+        DEF arm Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0.8 0.6
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.24
+            radius 0.025
+          }
+        }
+      ]
+      name "left arm"
+      boundingObject USE arm
+      physics Physics {
+        mass 0.2
+      }
+      linearVelocity 0 0 -2.428639081841569e-08
+    }
+    Solid {
+      translation -0.118 0 0.0029937278171947024
+      children [
+        DEF arm Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0.8 0.6
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.24
+            radius 0.025
+          }
+        }
+      ]
+      name "right arm"
+      boundingObject USE arm
+      physics Physics {
+        mass 0.2
+      }
+      linearVelocity 0 0 -2.428639081841569e-08
+    }
+    Solid {
+      translation 0 0 0.1819905917253184
+      children [
+        DEF head Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 0.8 0.6
+            roughness 1
+            metalness 0
+          }
+          geometry Sphere {
+            radius 0.06
+          }
+        }
+      ]
+      name "head"
+      boundingObject USE head
+      physics Physics {
+        mass 0.3
+      }
+      linearVelocity 0 0 -3.642809195033094e-08
+    }
+    Solid {
+      translation 0 0 -4.7041401824488016e-05
+      children [
+        DEF body_box Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.4 0.8
+            roughness 0.3
+            metalness 0.2
+          }
+          geometry Box {
+            size 0.19 0.14 0.25
+          }
+        }
+      ]
+      name "body"
+      boundingObject USE body_box
+      physics Physics {
+        mass 1.5
+        centerOfMass [
+          0 0 0
+        ]
+      }
+      linearVelocity 0 0 -1.8205078159400834e-07
+    }
+  ]
+  name "humanoid_robot"
+}
