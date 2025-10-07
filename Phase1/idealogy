@@ -1,81 +1,86 @@
 
-# 🤖 Self-Evolving Bipedal Robot Species
 
-### *Webots Implementation*
+# Self-Evolving Bipedal Robot Species
 
----
-
-## 💡 Ideology
-
-The goal of this project is to simulate **evolutionary learning** in bipedal robots — enabling them to *learn, adapt, and evolve* their walking strategies over generations, much like living organisms do in nature.
-
-Instead of manually coding a walking gait, we use **evolutionary algorithms** to let robots **self-discover optimal movement patterns** through trial, error, and selection.
+## Webots Implementation
 
 ---
 
-## ⚙️ Phase 1 – Setup and Foundation
+## Ideology
 
-### 🎯 Objective
+This project simulates evolutionary learning in bipedal robots, enabling them to learn, adapt, and evolve their walking strategies over generations.
 
-Build the base simulation environment and robot structure required for the evolution process to begin.
-
-### 🧱 Phase 1 Tasks
-
-* Create the **bipedal robot prototype** in Webots (legs, joints, sensors, motors).
-* Set up the **evolutionary supervisor** to manage multiple robots and generations.
-* Define **fitness criteria** (e.g., distance walked, balance, or energy efficiency).
-* Build a **modular project structure** for clean and scalable development.
+Instead of manually programming a walking gait, the project uses evolutionary algorithms to allow robots to discover optimal movement patterns through trial, error, and selection.
 
 ---
 
-## 🌍 Why Bipedal Robots?
+## Phase 1 – Setup and Foundation
 
-1. **Complex locomotion** → creates a rich fitness landscape for evolution.
-2. **Balancing challenges** → provide strong natural selection pressure.
-3. **Gait evolution** → produces visible, measurable progress across generations.
-4. **Human-like movement** → results are intuitive and easy to visualize and analyze.
+**Objective:**
+Build the base simulation environment and robot structure needed for the evolution process.
 
----
+**Tasks:**
 
-## 🧬 Core Concept
-
-We simulate an **evolutionary process** where:
-
-* Each robot = one **individual** (genome = parameters controlling joints).
-* The **population** evolves across generations.
-* **Best performers** (robots that walk farthest or stay balanced longest) are selected.
-* **Offspring inherit and mutate** traits — leading to gradually improved gaits over time.
+* Create a bipedal robot prototype in Webots with legs, joints, sensors, and motors.
+* Set up an evolutionary supervisor to manage multiple robots and generations.
+* Define fitness criteria such as distance traveled and balance.
+* Organize the project structure for modular and scalable development.
 
 ---
 
-## 📁 Project Structure
+## Why Bipedal Robots?
+
+1. Complex locomotion provides a rich fitness landscape for evolution.
+2. Balancing challenges create strong selection pressure.
+3. Gait evolution allows measurable progress across generations.
+4. Human-like movement makes the results intuitive to understand.
+
+---
+
+## Core Concept
+
+* Each robot is treated as an individual with a genome representing parameters controlling its joints.
+* Populations of robots evolve over generations.
+* The best performing robots are selected based on fitness.
+* Offspring inherit and mutate traits, leading to improved gaits over time.
+
+---
+
+## Project Structure
 
 ```
 bipedal_evolution_project/
 ├── worlds/
 │   └── evolution_world.wbt          # Main Webots world file
 ├── controllers/
-│   ├── evolutionary_supervisor/     # Evolution manager
+│   ├── evolutionary_supervisor/     # Evolution management
 │   │   ├── evolutionary_supervisor.py
 │   │   ├── genome.py
 │   │   ├── population.py
 │   │   └── environment.py
-│   └── bipedal_robot/               # Robot controller logic
+│   └── bipedal_robot/               # Individual robot controller
 │       └── bipedal_robot.py
 ```
 
+---
 
+## Future Phases
 
-## 🧠 Tools & Technologies
-
-* **Webots** – 3D robot simulation environment
-* **Python** – Controller logic and evolution algorithms
-* **Evolutionary Algorithms** – Genetic-style learning and adaptation
+* **Phase 2:** Implement evolutionary algorithm (selection, mutation, crossover).
+* **Phase 3:** Optimize fitness evaluation and visualization.
+* **Phase 4:** Achieve stable walking behavior through evolution.
 
 ---
 
-## 🏁 Expected Outcome
+## Tools and Technologies
 
-By the end of Phase 1, we will have a **working environment** with a bipedal robot prototype and an **evolution supervisor** ready to simulate evolution-based locomotion.
+* Webots for 3D robot simulation
+* Python for controller logic and evolution algorithms
+* Evolutionary algorithms for adaptive learning
 
 ---
+
+## Expected Outcome
+
+At the end of Phase 1, the simulation environment will be ready with a working bipedal robot prototype and an evolutionary supervisor to simulate evolution-based locomotion.
+
