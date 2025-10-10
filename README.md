@@ -38,9 +38,6 @@ Instead of hardcoding motion, the robot’s gait is discovered and optimized aut
 * The redesigned world now supports efficient testing and robot placement.
 
 ---
-Perfect — here’s your **Phase 4** and **Phase 5** written in the same clean, concise style as your earlier phases 👇
-
----
 
 ### **Phase 4 – Transition to DARwIn-OP3 and Controller Adaptation**
 
@@ -74,5 +71,6 @@ Perfect — here’s your **Phase 4** and **Phase 5** written in the same clean,
 ## Expected Outcome
 
 To create a **self-evolving bipedal robot** capable of learning efficient walking and balancing behaviors autonomously within a simulated environment.
+
 <img width="414" height="375" alt="image" src="https://github.com/user-attachments/assets/890f3e02-ac30-4360-8884-1c1536f64294" />
 
