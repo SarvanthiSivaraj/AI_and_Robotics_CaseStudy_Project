@@ -38,13 +38,28 @@ Instead of hardcoding motion, the robot’s gait is discovered and optimized aut
 * The redesigned world now supports efficient testing and robot placement.
 
 ---
+Perfect — here’s your **Phase 4** and **Phase 5** written in the same clean, concise style as your earlier phases 👇
 
-## Current Progress
+---
 
-* Simulation environment refined and stable.
-* Bipedal robot model under active development.
-* Basic controller logic initialized.
-* Preparing for the next phase: **Evolutionary algorithm integration and gait optimization**.
+### **Phase 4 – Transition to DARwIn-OP3 and Controller Adaptation**
+
+* Faced multiple mechanical and coordinate issues while building the robot from scratch, leading to unstable walking behavior.
+* Switched to the **DARwIn-OP3** humanoid robot available in Webots for a more reliable and stable framework.
+* Implemented custom Python controllers enabling the robot to **walk forward, backward, and turn** smoothly.
+* Focus shifted from robot construction to refining **controller logic and walking behavior**.
+* This transition allowed continued progress on **evolutionary learning** without being blocked by mechanical instabilities.
+
+---
+
+### **Phase 5 – Evolutionary Algorithm Integration**
+
+* Implemented a **genotype-based evolutionary algorithm** to evolve the robot’s walking gait.
+* Each genotype encodes **motor angles and timings** for one complete stride.
+* The evolution process starts when **‘E’** is pressed, generating a population of genomes and evaluating them based on **distance, balance, and stability**.
+* Performed **selection, mutation, and crossover** to evolve improved gait patterns over generations.
+* Encountered challenges with fitness stability, mutation tuning, and inconsistent gait convergence.
+* Current progress shows gradual improvement in **walking performance and stability**, forming the foundation for full self-evolving behavior.
 
 ---
 
@@ -59,4 +74,5 @@ Instead of hardcoding motion, the robot’s gait is discovered and optimized aut
 ## Expected Outcome
 
 To create a **self-evolving bipedal robot** capable of learning efficient walking and balancing behaviors autonomously within a simulated environment.
+<img width="414" height="375" alt="image" src="https://github.com/user-attachments/assets/890f3e02-ac30-4360-8884-1c1536f64294" />
 
