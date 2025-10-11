@@ -1,5 +1,15 @@
 # AI_and_Robotics_CaseStudy_Project
 
+### **Disclaimer**
+
+We sincerely apologize for the inconsistency in our commit dates, sir. In our previously shared repository link, we had been uploading everything on time and keeping our progress regular. However, after that, we suddenly faced some technical issues with GitHub — our assigned repo wouldn’t open properly.
+
+Because of that, for around one phase of work, we couldn’t upload any updates even though we were continuously working offline and completing everything on schedule. Later, we had an github verification/authentication error. Once the issue got resolved, we created a new repository and immediately uploaded all the pending files, codes, and progress that had been done during that time.
+
+We completely understand that an excuse is still an excuse, but we truly wanted to clarify that the delay in commits was only due to technical issues, not a lack of work or effort. We are genuinely sorry for the inconvenience, sir, and we really hope you understand our situation. 
+
+---
+
 ## Overview
 
 This project aims to develop and evolve a **bipedal robot** using **evolutionary algorithms** within the **Webots simulation environment**.
